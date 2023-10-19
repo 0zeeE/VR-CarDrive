@@ -45,6 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6188443072004131192}
   - component: {fileID: 6957554095926903387}
+  - component: {fileID: 560024408395208884}
   m_Layer: 0
   m_Name: SpawnTrigger
   m_TagString: SpawnTrigger
@@ -86,8 +87,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.616557, y: 1, z: 1}
+  m_Center: {x: -0.007523219, y: 0, z: 0}
+--- !u!114 &560024408395208884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8887294747683525182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03262dd0c50d4024895915f365016870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}
 --- !u!1001 &46789293967606642
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,7 +20,13 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Colliding");
-        spawnManager.SpawnTriggerEntered();
+        if (other.tag == "Player")
+        {
+            spawnManager.SpawnTriggerEntered();
+            Debug.Log("Colliding");
+        }
+
+
+
     }
 }
