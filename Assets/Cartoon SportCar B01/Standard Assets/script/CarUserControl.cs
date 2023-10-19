@@ -25,12 +25,20 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // pass the input to the car!
-            float h = Mathf.Clamp(steeringWheel.angle /maxTurnAngle,-1,1);
-            float v = Mathf.Clamp(speedLever.angle / maxSpeedAngle,-1,1);
-            if(Mathf.Abs(v) < 0.1f)
-            {
-                v = 0;
-            }
+
+            //XR Control
+            //float h = Mathf.Clamp(steeringWheel.angle /maxTurnAngle,-1,1);
+            //float v = Mathf.Clamp(speedLever.angle / maxSpeedAngle,-1,1);
+            //if(Mathf.Abs(v) < 0.1f)
+            //{
+            //    v = 0;
+            //}
+
+            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = CrossPlatformInputManager.GetAxis("Vertical");
+           
+
+
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);
