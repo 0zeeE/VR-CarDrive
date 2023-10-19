@@ -6,10 +6,12 @@ public class SpawnManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public RoadSpawner roadSpawner;
+    public PlotSpawner plotSpawner;
 
     void Start()
     {
         roadSpawner.GetComponent<RoadSpawner>();
+        plotSpawner.GetComponent<PlotSpawner>();
     }
 
     // Update is called once per frame
@@ -21,5 +23,8 @@ public class SpawnManager : MonoBehaviour
     public void SpawnTriggerEntered()
     {
         roadSpawner.MoveRoad();
+        plotSpawner.SpawnPlot();
+        plotSpawner.SpawnPlot();
+        plotSpawner.SpawnPlot();
     }
 }
