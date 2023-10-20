@@ -28,18 +28,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
             //XR input Control
 
-            //float h = Mathf.Clamp(steeringWheel.angle /maxTurnAngle,-1,1);
-            //float v = Mathf.Clamp(speedLever.angle / maxSpeedAngle,-1,1);
-            //if(Mathf.Abs(v) < 0.1f)
-            //{
-            //    v = 0;
-            //}
+            float h = Mathf.Clamp(steeringWheel.angle / maxTurnAngle, -1, 1);
+            float v = Mathf.Clamp(speedLever.angle / maxSpeedAngle, -1, 1);
+            if (Mathf.Abs(v) < 0.1f)
+            {
+                v = 0;
+            }
 
             //Global input
 
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
-           
+            //float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            //float v = CrossPlatformInputManager.GetAxis("Vertical");
+
 
 
 #if !MOBILE_INPUT
